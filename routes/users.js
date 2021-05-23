@@ -5,10 +5,6 @@ const _ = require("lodash");
 const { User, validate } = require("../models/user");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-  const user = await User.find();
-  res.send(user);
-});
 
 router.post("/", async (req, res) => {
   const result = validate(req.body)
